@@ -425,3 +425,8 @@ form {
 .rating label:hover ~ label {
     background: url('path_to_star_filled_icon.png') no-repeat; /* Reemplaza con la ruta a tu icono de estrella lleno */
 }
+
+.btn-outline-info{
+
+    color:#4CAF50
+}
