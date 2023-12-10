@@ -180,10 +180,10 @@
     color: white; /* Cambia 'white' por el color que prefieras */
 }
 .carousel-title2 {
-    color:#ff8800 
+    color:#ffffff 
 }
 .carousel-text2 {
-    color: #ff8800 
+    color: #ffffff 
 }
 .container {
     display: grid;
@@ -361,4 +361,32 @@ form {
 }
 .show {
     display: block !important;
+}
+
+/* Estilo para el menú desplegable de ordenamiento */
+#sortOptions {
+    font-family: Arial, sans-serif; /* Cambia la fuente según la utilizada en tu sitio */
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 4px; /* Bordes redondeados */
+    background-color: white;
+    margin: 10px 0; /* Espaciado */
+    cursor: pointer;
+}
+
+/* Estilo para las opciones dentro del menú desplegable */
+#sortOptions option {
+    padding: 5px 10px;
+}
+
+/* Agrega algunos estilos al pasar el mouse (opcional) */
+#sortOptions:hover {
+    border-color: #ccc;
+}
+
+/* Estilo para cuando el menú desplegable está enfocado */
+#sortOptions:focus {
+    outline: none;
+    border-color: #aaa;
 }
