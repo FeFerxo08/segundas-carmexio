@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lobby del Administrador</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+
+        .lobby-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #262626;
+        }
+
+        .sidebar-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: left;
+            background-color: #555;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-button:hover {
+            background-color: #ff2d55;
+        }
+
+        h2 {
+            color: #ff2d55;
+        }
+
+        /* Puedes agregar más estilos personalizados aquí según sea necesario */
+    </style>
+</head>
+<body>
+    <div class="lobby-container">
+        <div class="sidebar">
+            <button class="sidebar-button">Tablero</button>
+            <button class="sidebar-button" onclick="location.href='agregar_usuarios.html'">Usuarios</button>
+            <button class="sidebar-button">Productos</button>
+            <button class="sidebar-button">Configuración</button>
+            <button class="sidebar-button" onclick="location.href='agregar_productos.html'">Agregar Productos</button>
+            <button class="sidebar-button">Mi Catálogo</button>
+            <button class="sidebar-button">Pedidos</button>
+            <button class="sidebar-button">Clientes</button>
+            <button class="sidebar-button">Módulos y Servicios</button>
+            <button class="sidebar-button">Reglas de Precios</button>
+            <button class="sidebar-button">Envíos</button>
+            <button class="sidebar-button">Preferencias</button>
+            <button class="sidebar-button">Localización</button>
+            <button class="sidebar-button">Parámetros Avanzados</button>
+            <button class="sidebar-button">Estadísticas</button>
+            <button class="sidebar-button">Administración</button>
+            <button class="sidebar-button">Stock</button>
+            <button class="sidebar-button">Instalar Datos de Ejemplo</button>
+        </div>
+        <div class="main-content">
+            <h2>Bienvenido al Lobby del Administrador</h2>
+            <p>Este es un contenido de ejemplo para la página del administrador.</p>
+            <p>Contenido....</p>
+            <p>Contenido.....</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Gestión de Usuarios</title>
+    <style>
+        body {
+    background-color: #1a1a1a; /* Color de fondo oscuro */
+    color: #f0f0f0; /* Color del texto en contraste */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ff2d55; /* Color vibrante para los títulos */
+}
+
+.form-label {
+    color: #4dd0e1; /* Color claro para las etiquetas */
+}
+
+.form-control {
+    background-color: #262626;
+    border: none;
+    border-bottom: 2px solid #4dd0e1; /* Borde inferior para destacar */
+    color: #f0f0f0;
+}
+
+.form-control:focus {
+    background-color: #333333;
+    border-bottom: 2px solid #ff2d55; /* Color de enfoque */
+    color: #f0f0f0;
+}
+
+.btn {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ff2d55; /* Color principal de los botones */
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #ff4757; /* Efecto hover */
+}
+
+.btn-warning {
+    background-color: #ff9500; /* Botón de edición */
+    color: #ffffff;
+}
+
+.btn-warning:hover {
+    background-color: #ffca28;
+}
+
+.btn-danger {
+    background-color: #ff3b30; /* Botón de eliminación */
+    color: #ffffff;
+}
+
+.btn-danger:hover {
+    background-color: #ff6b6b;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #333333;
+}
+
+.table th, .table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #4dd0e1; /* Líneas de separación */
+}
+
+.table th {
+    background-color: #262626; /* Cabezera de la tabla */
+    color: #ff2d55;
+}
+
+.modal-content {
+    background-color: #262626;
+    color: #f0f0f0;
+}
+
+.modal-header, .modal-footer {
+    border-bottom: 1px solid #4dd0e1;
+    border-top: 1px solid #4dd0e1;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="container mt-5">
+        <h1>Información del Usuario</h1>
+        <form>
+            <div class="mb-3">
+                <label for="nombreUsuario" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombreUsuario" placeholder="Ingresa el nombre del usuario">
+            </div>
+            <div class="mb-3">
+                <label for="emailUsuario" class="form-label">Email</label>
+                <input type="email" class="form-control" id="emailUsuario" placeholder="Ingresa el email del usuario">
+            </div>
+            <div class="mb-3">
+                <label for="direccionUsuario" class="form-label">Dirección del Usuario</label>
+                <input type="text" class="form-control" id="direccionUsuario" placeholder="Ingresa la dirección del usuario">
+            </div>
+            <div class="mb-3">
+                <label for="telefonoUsuario" class="form-label">Teléfono del Usuario</label>
+                <input type="tel" class="form-control" id="telefonoUsuario" placeholder="Ingresa el teléfono del usuario">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="agregarUsuario()">Agregar</button>
+        </form>
+    </div>
+
+    <div class="container mt-3">
+        <h2>Tabla de Usuarios</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Editar</th>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>Borrar</th>
+                </tr>
+            </thead>
+            <tbody id="tablaUsuarios">
+                
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editarModalLabel">Editar Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="idUsuarioEditar" class="form-label">ID del Usuario</label>
+                            <input type="text" class="form-control" id="idUsuarioEditar" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombreUsuarioEditar" class="form-label">Nombre del Usuario</label>
+                            <input type="text" class="form-control" id="nombreUsuarioEditar">
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailUsuarioEditar" class="form-label">Email del Usuario</label>
+                            <input type="email" class="form-control" id="emailUsuarioEditar">
+                        </div>
+                        <div class="mb-3">
+                            <label for="direccionUsuarioEditar" class="form-label">Dirección del Usuario</label>
+                            <input type="text" class="form-control" id="direccionUsuarioEditar">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefonoUsuarioEditar" class="form-label">Teléfono del Usuario</label>
+                            <input type="tel" class="form-control" id="telefonoUsuarioEditar">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="guardarEdicionUsuario()">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        var usuarios = []; 
+
+        function agregarUsuario() {
+            var nombreUsuario = document.getElementById("nombreUsuario").value;
+            var emailUsuario = document.getElementById("emailUsuario").value;
+            var direccionUsuario = document.getElementById("direccionUsuario").value;
+            var telefonoUsuario = document.getElementById("telefonoUsuario").value;
+
+            if (nombreUsuario === "" || emailUsuario === "" || direccionUsuario === "" || telefonoUsuario === "") {
+                alert("Por favor, completa todos los campos para agregar al usuario.");
+                return;
+            }
+
+            var usuarioExistente = usuarios.find(function(usuario) {
+                return usuario.email === emailUsuario;
+            });
+
+            if (usuarioExistente) {
+                alert("El usuario con este email ya existe.");
+                return;
+            }
+
+            var proximoID = usuarios.length + 1;
+
+            var usuario = {
+                id: proximoID,
+                nombre: nombreUsuario,
+                email: emailUsuario,
+                direccion: direccionUsuario,
+                telefono: telefonoUsuario
+            };
+
+            usuarios.push(usuario);
+
+            document.getElementById("nombreUsuario").value = "";
+            document.getElementById("emailUsuario").value = "";
+            document.getElementById("direccionUsuario").value = "";
+            document.getElementById("telefonoUsuario").value = "";
+
+            actualizarTablaUsuarios();
+        }
+
+        function editarUsuario(id) {
+            var usuario = usuarios.find(function(u) {
+                return u.id === id;
+            });
+
+            if (usuario) {
+                document.getElementById("nombreUsuarioEditar").value = usuario.nombre;
+                document.getElementById("emailUsuarioEditar").value = usuario.email;
+                document.getElementById("direccionUsuarioEditar").value = usuario.direccion;
+                document.getElementById("telefonoUsuarioEditar").value = usuario.telefono;
+                document.getElementById("idUsuarioEditar").value = usuario.id;
+                var editarModal = new bootstrap.Modal(document.getElementById('editarModal'));
+                editarModal.show();
+            }
+        }
+
+        function guardarEdicionUsuario() {
+            var usuarioId = parseInt(document.getElementById("idUsuarioEditar").value);
+            var usuario = usuarios.find(function(u) {
+                return u.id === usuarioId;
+            });
+
+            if (usuario) {
+                usuario.nombre = document.getElementById("nombreUsuarioEditar").value;
+                usuario.email = document.getElementById("emailUsuarioEditar").value;
+                usuario.direccion = document.getElementById("direccionUsuarioEditar").value;
+                usuario.telefono = document.getElementById("telefonoUsuarioEditar").value;
+                var editarModal = new bootstrap.Modal(document.getElementById('editarModal'));
+                editarModal.hide();
+                actualizarTablaUsuarios();
+            }
+        }
+
+        function eliminarUsuario(id) {
+            var index = usuarios.findIndex(function(u) {
+                return u.id === id;
+            });
+
+            if (index !== -1) {
+                usuarios.splice(index, 1);
+                actualizarTablaUsuarios();
+            }
+        }
+
+        function actualizarTablaUsuarios() {
+            var tabla = document.getElementById("tablaUsuarios");
+            tabla.innerHTML = "";
+            usuarios.forEach(function(usuario) {
+                var fila = tabla.insertRow();
+                var cellEditar = fila.insertCell(0);
+                var cellId = fila.insertCell(1);
+                var cellNombre = fila.insertCell(2);
+                var cellEmail = fila.insertCell(3);
+                var cellDireccion = fila.insertCell(4);
+                var cellTelefono = fila.insertCell(5);
+                var cellBorrar = fila.insertCell(6);
+
+                cellEditar.innerHTML = '<button class="btn btn-warning" onclick="editarUsuario(' + usuario.id + ')">Editar</button>';
+                cellId.innerHTML = usuario.id;
+                cellNombre.innerHTML = usuario.nombre;
+                cellEmail.innerHTML = usuario.email;
+                cellDireccion.innerHTML = usuario.direccion;
+                cellTelefono.innerHTML = usuario.telefono;
+                cellBorrar.innerHTML = '<button class="btn btn-danger" onclick="eliminarUsuario(' + usuario.id + ')">Borrar</button>';
+            });
+        }
+    </script>
+</body>
+</html>

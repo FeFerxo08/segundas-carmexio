@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Carrito de Compras - Espacio Soñado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        header li {
+            margin-right: 20px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        .item-carrito {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            position: relative;
+            overflow: auto;
+        }
+
+        .item-carrito img {
+            max-width: 130px;
+            margin: 0 10px 0 0;
+            float: left;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        .item-carrito h2 {
+            color: #333;
+            margin-left: 130px;
+        }
+
+        .item-carrito p {
+            margin-left: 130px;
+            color: #393333;
+        }
+
+        .comprar-ahora-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .comprar-ahora-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo de productos</a></li>
+            <li><a href="lista_deseos.html">Lista de deseos</a></li>
+            <li><a href="ordenes.html">Mis compras</a></li>
+            <li><a href="">Contacto</a></li>
+            <li><a href="">Acerca de</a></li>
+        </ul>
+    </header>
+    
+    <!-- Título del carrito de compras -->
+    <h1 >Carrito de Compras</h1>
+
+    <!-- Producto 1: Paneles Decorativos 3D -->
+    <div class="item-carrito">
+        <img src="imagenes/AMG GT-R.jpg" alt="Mercedes AMG GT-R">
+        <h2>Mercedes AMG GT-R</h2>
+        <p>Descripción: Paneles Decorativos 3D...</p>
+        <p>Precio: $1092.99</p>
+        <p>Estado: En carrito</p>
+        <p>Fecha Agregado: 2023-11-30</p>
+        <button class="comprar-ahora-btn" onclick="window.location.href='pago6.html'">Comprar ahora</button>
+    </div>
+
+    <div class="item-carrito">
+        <img src="imagenes/led.jpg" alt="Lámpara LED de pared moderna ">
+        <h2>Lampara Led</h2>
+        <p>Descripción: Lámpara LED de pared moderna con visualización de vidrio...</p>
+        <p>Precio: $189.99</p>
+        <p>Estado: En carrito</p>
+        <p>Fecha Agregado: 2023-11-28</p>
+        <button class="comprar-ahora-btn" onclick="window.location.href='pago7.html'">Comprar ahora</button>
+    </div>
+
+    <div class="item-carrito">
+        <img src="imagenes/jarron.jpg" alt="Juego de jarrón de cerámica Blanca">
+        <h2>Jarron de ceramica</h2>
+        <p>Descripción: Juego de jarrón de cerámica Blanca, 3 jarrones pequeños para...</p>
+        <p>Precio: $360.99</p>
+        <p>Estado: En carrito</p>
+        <p>Fecha Agregado: 2023-11-27</p>
+        <button class="comprar-ahora-btn" onclick="window.location.href='pago8.html'">Comprar ahora</button>
+    </div>
+
+    <!-- Agrega aquí para más productos del carrito  -->
+
+</body>
+
+</html>
+</html>
