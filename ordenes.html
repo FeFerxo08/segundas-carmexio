@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mis Compras - Espacio Soñado</title>
+    <style>
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #202020; /* Un azul más suave */
+    color: white;
+    padding: 10px 20px; /* Añadiendo un poco más de espacio */
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Alineación vertical */
+}
+
+header li {
+    margin-right: 20px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em; /* Tamaño de letra más grande */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+header a:hover {
+    color: #d1e8ff; /* Cambio de color al pasar el ratón */
+}
+
+header form {
+    display: flex;
+    align-items: center;
+}
+
+header input[type="text"], header input[type="submit"] {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    margin-right: 10px;
+    transition: all 0.3s ease; /* Transición suave para los inputs */
+}
+
+header input[type="submit"] {
+    background-color: #00688B; /* Un tono más oscuro para el botón */
+    color: white;
+    cursor: pointer;
+}
+
+header input[type="submit"]:hover {
+    background-color: #005377; /* Oscurecer al pasar el ratón */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+.compra {
+    border: 1px solid #ccc;
+    margin: 20px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: relative;
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.compra h2 {
+    color: #333;
+    margin-left: 150px; /* Aumento del margen */
+}
+
+.compra img {
+    width: 120px;
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    margin: 0 20px 0 0;
+    float: left;
+}
+
+.estado {
+    font-weight: bold;
+}
+
+.estado-entregado {
+    color: #4CAF50; /* Verde más suave */
+}
+
+.fecha {
+    color: #777;
+}
+
+.ver-compra-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ver-compra-btn:hover {
+    background-color: #005377;
+    color: white;
+}
+    </style>
+</head>
+
+<body>
+    
+    <header>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catalogo de productos</a></li>
+            <li><a href="lista_deseos.html">Lista de deseos</a></li>
+        </ul>
+    </header>
+
+    <h1>Mis Compras</h1>
+
+    <div class="compra">
+        <img src="imagenes/lamborghini-huracan.jpg" alt="Lamborghini Huracan Performante">
+        <h2>Lamborghini Huracan Performante</h2>
+        <p>Estado: <span class="estado estado-entregado">Entregado</span></p>
+        <p class="fecha">Fecha de compra: 2023-11-08</p>
+        <button class="ver-compra-btn" onclick="window.location.href='detalles_compra.html?id=1'">Ver compra</button>
+    </div>
+
+    <div class="compra">
+        <img src="imagenes/porsche cayman producto.jpg" alt="Cayman">
+        <h2>Porsche Cayman S</h2>
+        <p>Estado: <span class="estado">En proceso</span></p>
+        <p class="fecha">Fecha de compra: 2023-11-05</p>
+        <button class="ver-compra-btn" onclick="window.location.href='detalles_compra.html?id=2'">Ver compra</button>
+    </div>
+
+    <div class="compra">
+        <img src="imagenes/audi r8 spyder.webp" alt="Audi R8 Spyder">
+        <h2>Audi R8 Spyder</h2>
+        <p>Estado: <span class="estado">En camino</span></p>
+        <p class="fecha">Fecha de compra: 2023-11-02</p>
+        <button class="ver-compra-btn" onclick="window.location.href='detalles_compra.html?id=3'">Ver compra</button>
+    </div>
+</body>
+
+</html>
