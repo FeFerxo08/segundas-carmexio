@@ -390,3 +390,38 @@ form {
     outline: none;
     border-color: #aaa;
 }
+
+/* Estilo para el formulario de reseñas */
+.review-form {
+    margin-top: 20px;
+}
+
+.review-form input[type="text"], .review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Estilo para el sistema de calificación por estrellas */
+.rating {
+    direction: rtl; /* Invierte el orden para que funcione correctamente */
+}
+
+.rating label {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('imagenes/estrella.png') no-repeat; 
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating input[type="radio"]:checked + label,
+.rating label:hover,
+.rating label:hover ~ label {
+    background: url('path_to_star_filled_icon.png') no-repeat; /* Reemplaza con la ruta a tu icono de estrella lleno */
+}
