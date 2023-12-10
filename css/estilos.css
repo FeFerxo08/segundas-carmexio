@@ -1,0 +1,333 @@
+/* Estilos básicos para la barra de menú */
+.menu-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.menu-bar li {
+    float: left;
+}
+
+.menu-bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-bar li a:hover {
+    background-color: #111;
+}
+
+/* Clase para el elemento del carrito */
+.menu-bar .cart-item {
+    float: right;
+}
+
+
+        /* Estilos básicos para las cards */
+        
+        
+        .card {
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 100%; 
+        }
+        
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .card-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .card-price {
+            color: grey;
+            font-size: 22px;
+        }
+
+        .card-text {
+            padding: 0 16px 16px;
+        }
+
+        /* Ajustes para la grilla de cards */
+        .card-container {
+            text-align: center;
+        }
+        
+
+/* Estilo para la ventana modal */
+.modal {
+    display: none; /* Ocultar la modal por defecto */
+    position: fixed; /* Mantenerla fija en la pantalla */
+    z-index: 1; /* Situarla sobre el resto de elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Anchura completa */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Habilitar el scroll si es necesario */
+    background-color: rgb(0,0,0); /* Color de fondo */
+    background-color: rgba(0,0,0,0.4); /* Negro con opacidad */
+}
+
+/* Contenido de la ventana modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% desde arriba y centrado horizontalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Podrías querer un ancho más pequeño para móviles */
+}
+
+/* El botón cerrar (x) */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo para el botón Agregar al carrito dentro de la ventana modal */
+
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea los elementos al principio de la flex container */
+    gap: 20px; /* Espacio entre la imagen y el contenedor de texto */
+}
+
+.modal-image {
+    flex: 1; /* Permite que la imagen crezca y ocupe espacio disponible */
+    display: flex;
+    justify-content: center; /* Centra la imagen en su contenedor */
+    align-items: center;
+}
+
+.modal-text-container {
+    flex: 2; /* Permite que el contenedor de texto crezca y ocupe más espacio que la imagen */
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+    overflow: auto; /* Asegura que todo el contenido sea accesible en pantallas pequeñas */
+}
+
+/* Estilos para el botón */
+
+
+/*footer*/
+.footer {
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+.footer a:hover {
+    color: #017cff;
+}
+.footer .social-icons {
+    font-size: 24px; /* Tamaño de los iconos */
+}
+
+ /* Establece un alto máximo para las imágenes del carrusel */
+ .carousel-item {
+    height: 400px; /* Ajusta este valor según tus necesidades */
+}
+.carousel-item img {
+    object-fit: cover; /* Esto asegura que la imagen cubra el área sin estirarse */
+    width: 100%;
+    height: 100%;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+    min-height: 600px; /* Establece un alto mínimo para las tarjetas */
+    margin: 0 auto;
+}
+
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-body {
+    margin: 10px 0;
+}
+
+.card-title {
+    font-size: 1.25em;
+    margin-bottom: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    color: #333;
+}
+
+input {
+    padding: 8px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.cookie-consent-container {
+    background-color: #f8f9fa; /* Cambia el color de fondo si lo necesitas */
+    color: #333; /* Cambia el color del texto si lo deseas */
+}
+  
+.main-title {
+    text-align: center; /* Centra el título */
+    font-size: 2.5em; /* Ajusta el tamaño de la fuente */
+    margin-top: 1em; /* Agrega espacio en la parte superior */
+    margin-bottom: 1em; /* Agrega espacio en la parte inferior */
+    font-family: 'Arial', sans-serif; /* Cambia la fuente si es necesario */
+    color: #333; /* Cambia al color que prefieras */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sombra de texto ligera para mejorar la legibilidad */
+    max-width: 80%; /* Controla el ancho máximo del título */
+    margin-left: auto; /* Esto y la siguiente línea centran el título si tiene un ancho máximo */
+    margin-right: auto;
+}
+
+
+body {
+    /* Agrega margen superior al cuerpo para evitar que el botón se superponga al contenido */
+    margin-top: 40px;
+}
+
+#botonGestion {
+    /* Estilo del botón */
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    /* Fija la posición del botón */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Estilos para la información del producto */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    margin-top: 20px;
+}
+
+/* Estilos para la tabla de productos */
+.table {
+    margin-top: 20px;
+}
+
+/* Estilos para el modal de edición */
+#editarModal {
+    color: #333;
+}
+
+/* Ajustes de estilo para los botones en la tabla */
+.btn-warning,
+.btn-danger {
+    margin-right: 5px;
+}
