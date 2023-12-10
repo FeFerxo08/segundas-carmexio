@@ -173,6 +173,18 @@
     height: 100%;
     color:rgba(255, 253, 253, 0.986)
 }
+.carousel-title{
+    color:#ddd 
+}
+.carousel-text {
+    color: white; /* Cambia 'white' por el color que prefieras */
+}
+.carousel-title2 {
+    color:#ff8800 
+}
+.carousel-text2 {
+    color: #ff8800 
+}
 .container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -331,4 +343,22 @@ form {
 .btn-warning,
 .btn-danger {
     margin-right: 5px;
+}
+
+.hamburger-menu {
+    display: none;
+    /* Más estilos según tus necesidades */
+}
+
+@media screen and (max-width: 768px) { /* Ajusta este valor según tus necesidades */
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu-bar {
+        display: none;
+    }
+}
+.show {
+    display: block !important;
 }
