@@ -122,7 +122,7 @@
 <div class="container mt-5">
 <div class="row">
 <div class="col-md-4 col-sm-6">
-<div class="card">
+<div class="card" id="producto1">
 <img alt="Huracan" class="card-img-top" src="imagenes/lamborghini-huracan.jpg" title="Imagen del Huracan"/>
 <div class="card-body">
 <h5 class="card-title">Lamborghini Huracan Performante</h5>
@@ -137,12 +137,13 @@ capaz de acelerar de 0 a 100 km/h en 2.9 segundos. Destaca por su tecnología ae
 <button class="btn btn-outline-primary" onclick="openModal('modal1')" type="button">Detalles</button>
 <button class="btn btn-outline-success" onclick="location.href='pago1.html';" type="button">Comprar</button>
 <button class="btn btn-outline-info" onclick="openReviewsModal('modalReviews1')">Reseñas</button>
+<button onclick="agregarAListaDeseos('producto1')">Agregar a Lista de Deseos</button>
 </div>
 </div>
 </div>
 </div>
 <div class="col-md-4 col-sm-6">
-<div class="card">
+<div class="card" id="producto2">
 <img alt="Cabecero" class="card-img-top" src="imagenes/porsche cayman producto.jpg" title="Imagen del cayman"/>
 <div class="card-body">
 <h5 class="card-title">Porsche Cayman S</h5>
@@ -157,12 +158,13 @@ Equipado con un potente motor de configuración central, ofrece una experiencia 
 <button class="btn btn-outline-primary" onclick="openModal('modal2')" type="button">Detalles</button>
 <button class="btn btn-outline-success" onclick="location.href='pago2.html';" type="button">Comprar</button>
 <button class="btn btn-outline-info" onclick="openReviewsModal('modalReviews2')">Reseñas</button>
+<button onclick="agregarAListaDeseos('producto2')">Agregar a Lista de Deseos</button>
 </div>
 </div>
 </div>
 </div>
 <div class="col-md-4 col-sm-6">
-<div class="card">
+<div class="card" id="producto3">
 <img alt="mclaren p1" class="card-img-top" src="imagenes/mclaren-p1.webp" title="Imagen del p1"/>
 <div class="card-body">
 <h5 class="card-title">Mclaren P1</h5>
@@ -178,12 +180,13 @@ Limitado en producción, el P1 es un ícono de lujo y rendimiento extremo en el 
 <button class="btn btn-outline-primary" onclick="openModal('modal3')" type="button">Detalles</button>
 <button class="btn btn-outline-success" onclick="location.href='pago3.html';" type="button">Comprar</button>
 <button class="btn btn-outline-info" onclick="openReviewsModal('modalReviews3')">Reseñas</button>
+<button onclick="agregarAListaDeseos('producto3')">Agregar a Lista de Deseos</button>
 </div>
 </div>
 </div>
 </div>
 <div class="col-md-4 col-sm-6">
-<div class="card">
+<div class="card" id="producto4">
 <img alt="Reloj" class="card-img-top" src="imagenes/nissan-gtr-custom.jpg" title="Nissan GT-R"/>
 <div class="card-body">
 <h5 class="card-title">Nissan GT-R CUSTOM</h5>
@@ -199,12 +202,13 @@ Un verdadero espectáculo de ingeniería y diseño para los entusiastas del auto
 <button class="btn btn-outline-primary" onclick="openModal('modal4')" type="button">Detalles</button>
 <button class="btn btn-outline-success" onclick="location.href='pago4.html';" type="button">Comprar</button>
 <button class="btn btn-outline-info" onclick="openReviewsModal('modalReviews4')">Reseñas</button>
+<button onclick="agregarAListaDeseos('producto4')">Agregar a Lista de Deseos</button>
 </div>
 </div>
 </div>
 </div>
 <div class="col-md-4 col-sm-6">
-<div class="card">
+<div class="card" id="producto5">
 <img alt="Supra mk5" class="card-img-top" src="imagenes/supra.jpeg" title="Imagen del supra"/>
 <div class="card-body">
 <h5 class="card-title">Toyota Supra MK5</h5>
@@ -220,12 +224,13 @@ haciendo honor a su legado como un ícono en el mundo de los coches deportivos.
 <button class="btn btn-outline-primary" onclick="openModal('modal5')" type="button">Detalles</button>
 <button class="btn btn-outline-success" onclick="location.href='pago5.html';" type="button">Comprar</button>
 <button class="btn btn-outline-info" onclick="openReviewsModal('modalReviews5')">Reseñas</button>
+<button onclick="agregarAListaDeseos('producto5')">Agregar a Lista de Deseos</button>
 </div>
 </div>
 </div>
 </div>
 <div class="col-md-4 col-sm-6">
-<div class="card">
+<div class="card" id="producto6">
 <img alt="Ferrari 458 Italia" class="card-img-top" src="imagenes/ferrari 458 italia.jpeg" title="Imagen del ferrari 458 italia"/>
 <div class="card-body">
 <h5 class="card-title">Ferrari 458 Italia</h5>
@@ -241,12 +246,13 @@ lujosamente diseñado y tecnologías avanzadas, el 458 Italia es una joya en el 
 <button class="btn btn-outline-primary" onclick="openModal('modal6')" type="button">Detalles</button>
 <button class="btn btn-outline-success" onclick="location.href='pago6.html';" type="button">Comprar</button>
 <button class="btn btn-outline-info" onclick="openReviewsModal('modalReviews6')">Reseñas</button>
+<button onclick="agregarAListaDeseos('producto6')">Agregar a Lista de Deseos</button>
 </div>
 </div>
 </div>
 </div>
 <div class="col-md-4 col-sm-6">
-<div class="card">
+<div class="card" id="producto7">
 <img alt="Aventador SVJ" class="card-img-top" src="imagenes/lamborghini-aventador-svj.webp" title="Imagen del aventador svj"/>
 <div class="card-body">
 <h5 class="card-title">Lamborghini Aventador SVJ</h5>
@@ -261,12 +267,13 @@ Con su diseño agresivo y dinámico, es la personificación del lujo y la potenc
 <button class="btn btn-outline-primary" onclick="openModal('modal7')" type="button">Detalles</button>
 <button class="btn btn-outline-success" onclick="location.href='pago7.html';" type="button">Comprar</button>
 <button class="btn btn-outline-info" onclick="openReviewsModal('modalReviews7')">Reseñas</button>
+<button onclick="agregarAListaDeseos('producto7')">Agregar a Lista de Deseos</button>
 </div>
 </div>
 </div>
 </div>
 <div class="col-md-4 col-sm-6">
-<div class="card">
+<div class="card" id="producto8">
 <img alt="Koenigsegg Regera" class="card-img-top" src="imagenes/koenigsegg-regera.jpg" title="Imagen del regera"/>
 <div class="card-body">
 <h5 class="card-title">Koenisgegg Regera</h5>
@@ -281,12 +288,13 @@ eléctricos, ofreciendo una aceleración asombrosa y una experiencia de conducci
 <button class="btn btn-outline-primary" onclick="openModal('modal8')" type="button">Detalles</button>
 <button class="btn btn-outline-success" onclick="location.href='pago8.html';" type="button">Comprar</button>
 <button class="btn btn-outline-info" onclick="openReviewsModal('modalReviews8')">Reseñas</button>
+<button onclick="agregarAListaDeseos('producto8')">Agregar a Lista de Deseos</button>
 </div>
 </div>
 </div>
 </div>
 <div class="col-md-4 col-sm-6">
-<div class="card">
+<div class="card" id="producto9">
 <img alt="Audi R8 Spyder" class="card-img-top" src="imagenes/audi r8 spyder.webp" title="Imagen del audi-r8 spyder"/>
 <div class="card-body">
 <h5 class="card-title">Audi R8 Spyder</h5>
@@ -301,12 +309,13 @@ proporciona una aceleración impresionante y un sonido emocionante, mientras que
 <button class="btn btn-outline-primary" onclick="openModal('modal9')" type="button">Detalles</button>
 <button class="btn btn-outline-success" onclick="location.href='pago9.html';" type="button">Comprar</button>
 <button class="btn btn-outline-info" onclick="openReviewsModal('modalReviews9')">Reseñas</button>
+<button onclick="agregarAListaDeseos('producto9')">Agregar a Lista de Deseos</button>
 </div>
 </div>
 </div>
 </div>
 <div class="col-md-4 col-sm-6">
-<div class="card">
+<div class="card" id="producto10">
 <img alt="AMG GT-R" class="card-img-top" src="imagenes/AMG GT-R.jpg" title="Imagen del AMG GT-R"/>
 <div class="card-body">
 <h5 class="card-title">Mercedes AMG GT-R</h5>
@@ -321,6 +330,7 @@ Destaca por su manejo dinámico, tecnología avanzada y un interior lujosamente 
 <button class="btn btn-outline-primary" onclick="openModal('modal10')" type="button">Detalles</button>
 <button class="btn btn-outline-success" onclick="location.href='pago10.html';" type="button">Comprar</button>
 <button class="btn btn-outline-info" onclick="openReviewsModal('modalReviews10')">Reseñas</button>
+<button onclick="agregarAListaDeseos('producto10')">Agregar a Lista de Deseos</button>
 </div>
 </div>
 </div>
@@ -1010,5 +1020,94 @@ document.getElementById('searchBox').addEventListener('input', function(e) {
 
     
 </script>
+</script>
 
+<script>
+    var productos = [
+    {
+        "id": "producto1",
+        "nombre": "Lamborghini Huracan Performante",
+        "precio": "331,000$",
+        "imagen": "imagenes/lamborghini-huracan.jpg",
+        "descripcion": "Un superdeportivo excepcional con un motor V10 de 5.2 litros y 640 CV."
+    },
+    {
+        "id": "producto2",
+        "nombre": "Porsche Cayman S",
+        "precio": "90,000$",
+        "imagen": "imagenes/porsche-cayman-producto.jpg",
+        "descripcion": "Un elegante coupé deportivo conocido por su manejo ágil y equilibrado."
+    },
+    {
+        "id": "producto3",
+        "nombre": "Mclaren P1",
+        "precio": "649,000$",
+        "imagen": "imagenes/mclaren-p1.webp",
+        "descripcion": "El McLaren P1 es un hiperdeportivo híbrido emblemático que combina un avanzado motor V8 twin-turbo con tecnología híbrida eléctrica."
+    },
+    {
+        "id": "producto4",
+        "nombre": "Nissan GT-R CUSTOM",
+        "precio": "172,930$",
+        "imagen": "imagenes/nissan-gtr-custom.jpg",
+        "descripcion": "El Nissan GT-R modificado eleva su ya impresionante rendimiento a nuevas alturas."
+    },
+    {
+        "id": "producto5",
+        "nombre": "Toyota Supra MK5",
+        "precio": "81,156$",
+        "imagen": "imagenes/supra.jpeg",
+        "descripcion": "El Toyota Supra MK5 es un deportivo ágil y potente, con un motor turbo de seis cilindros en línea que ofrece una emocionante experiencia de conducción."
+    },
+    {
+        "id": "producto6",
+        "nombre": "Ferrari 458 Italia",
+        "precio": "230,561$",
+        "imagen": "imagenes/ferrari 458 italia.jpeg",
+        "descripcion": "El Ferrari 458 Italia es un superdeportivo exquisito que combina un diseño aerodinámico y elegante con un potente motor V."
+    },
+    {
+        "id": "producto7",
+        "nombre": "Lamborgini Aventador SVJ",
+        "precio": "525,362$",
+        "imagen": "imagenes/lamborghini-aventador-svj.webp",
+        "descripcion": "El Lamborghini Aventador SVJ combina un impresionante motor V12 con tecnología aerodinámica avanzada, ofreciendo un rendimiento excepcional y una experiencia de conducción extrema."
+    },
+    {
+        "id": "producto8",
+        "nombre": "Koenisgegg Regera",
+        "precio": "450,000$",
+        "imagen": "imagenes/koenisgegg-regera.jpg",
+        "descripcion": "El Koenigsegg Regera es una obra maestra de la ingeniería automotriz, un hiperdeportivo híbrido que combina un potente motor V8 con tres motores eléctricos."
+    },
+    {
+        "id": "producto9",
+        "nombre": "Audi R8 Spyder",
+        "precio": "298,000$",
+        "imagen": "imagenes/audi r8 spyder.webp",
+        "descripcion": "El Audi R8 Spyder es un elegante superdeportivo convertible que ofrece una mezcla emocionante de potencia y lujo."
+    },
+    {
+        "id": "producto10",
+        "nombre": "Mercedes AMG GT-R",
+        "precio": "235,988$",
+        "imagen": "imagenes/AMG GT-R.jpg",
+        "descripcion": "El Mercedes AMG GT-R es un coche deportivo de alto rendimiento que combina un potente motor V8 biturbo con una agilidad excepcional y un diseño aerodinámic."
+    }
+];
+
+function agregarAListaDeseos(producto1) {
+    var productoDeseado = productos.find(p => p.id === producto1);
+    if (!productoDeseado) {
+        alert('Producto no encontrado');
+        return;
+    }
+
+    var listaDeseos = JSON.parse(localStorage.getItem('listaDeseos')) || [];
+    listaDeseos.push(productoDeseado);
+    localStorage.setItem('listaDeseos', JSON.stringify(listaDeseos));
+
+    alert('Producto añadido a la lista de deseos');
+}
+</script>
 

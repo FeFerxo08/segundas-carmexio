@@ -197,6 +197,20 @@ h1 {
                 elementoAEliminar.remove();
             }
         }
+
+        function mostrarListaDeseos() {
+    var listaDeseos = JSON.parse(localStorage.getItem('listaDeseos')) || [];
+    var container = document.getElementById('listaDeseos');
+    container.innerHTML = ''; // Limpiar el contenedor
+
+    listaDeseos.forEach(function(producto, index) {
+        container.innerHTML += generarHTMLProducto(producto, index);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    mostrarListaDeseos();
+});
     </script>
 </body>
 </html>
