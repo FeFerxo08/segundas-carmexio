@@ -73,6 +73,7 @@
             <i class="fas fa-user"></i> Cuenta
           </a>
         </li>
+        <input type="text" id="searchBox" placeholder="Buscar productos...">
       </ul>
     </div>
   </nav>
@@ -166,7 +167,7 @@ Equipado con un potente motor de configuración central, ofrece una experiencia 
 <div class="card-body">
 <h5 class="card-title">Mclaren P1</h5>
 <p class="card-text">
-<strong>2,000,000$</strong>
+<strong>649,000$</strong>
 <br/>
 El McLaren P1 es un hiperdeportivo híbrido emblemático que combina un avanzado motor V8 twin-turbo con tecnología híbrida eléctrica, 
 entregando una potencia combinada de más de 900 CV. Destaca por su impresionante aceleración, diseño aerodinámico futurista y tecnologías de vanguardia. 
@@ -270,7 +271,7 @@ Con su diseño agresivo y dinámico, es la personificación del lujo y la potenc
 <div class="card-body">
 <h5 class="card-title">Koenisgegg Regera</h5>
 <p class="card-text">
-<strong>1,000,000$</strong>
+<strong>450,000$</strong>
 <br/>
 El Koenigsegg Regera es una obra maestra de la ingeniería automotriz, un hiperdeportivo híbrido que combina un potente motor V8 con tres motores 
 eléctricos, ofreciendo una aceleración asombrosa y una experiencia de conducción lujosa y sofisticada. Con su diseño aerodinámico y tecnología innovadora, el Regera establece un nuevo estándar en el mundo de los autos de alto rendimiento.
@@ -899,6 +900,20 @@ function addToCart() {
     productsContainer.innerHTML = '';
     products.forEach(function(product) {
         productsContainer.appendChild(product);
+    });
+});
+
+document.getElementById('searchBox').addEventListener('input', function(e) {
+    var searchText = e.target.value.toLowerCase();
+    var products = document.querySelectorAll('.row .card');
+
+    products.forEach(function(product) {
+        var title = product.querySelector('.card-title').textContent.toLowerCase();
+        if (title.includes(searchText)) {
+            product.style.display = '';
+        } else {
+            product.style.display = 'none';
+        }
     });
 });
 </script>
